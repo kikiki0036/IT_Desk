@@ -24,7 +24,7 @@ app.get('/employeedetail',(req,res )=>{
         }
     });
 });
-app.post('/employeedetail',(req,res)=>{
+app.post('/add',(req,res)=>{
     const username=req.body.username;
     const password=req.body.password;
     const position=req.body.position;
@@ -40,7 +40,7 @@ app.post('/employeedetail',(req,res)=>{
         }
     });
 })
-app.put('/employeedetail',(req,res)=>{
+app.put('/update',(req,res)=>{
     const number=req.body.number;
     const username=req.body.username;
     const password=req.body.password;
@@ -56,8 +56,8 @@ app.put('/employeedetail',(req,res)=>{
         }
     })
 })
-app.delete('/delete/:nnumber',(res,req)=>{
-    const number=req.body.number;
+app.delete('/delete/:number',(res,req)=>{
+    const number=req.params.number; 
     db.query("DELETE FROM employeedetail WHERE number = ? ",number,(err,result)=>{
         if(err)
         {

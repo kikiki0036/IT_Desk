@@ -45,7 +45,7 @@ function Ideitp() {
     };
      const conficmem=()=>{
          console.log(nnum+" "+npass);
-       Axios.put('http://localhost:3001/employeedetail',{username:nuser,password:npass,position:npo,number:nnum}).then((response=>{
+       Axios.put('http://localhost:3001/update',{username:nuser,password:npass,position:npo,number:nnum}).then((response=>{
             setdata(
                 data.map((val)=>{
                     return val.number ==nnum ?{

@@ -22,10 +22,11 @@ const em=()=>
 }
   return (
     <div >
-      {page}
+      <Login/>
+      {/* {page}
       <button onClick={login}>click_me_to_login </button>
       <button onClick={admin}>click_me_to_admin </button>
-      <button onClick={em}>click me to_Em </button>
+      <button onClick={em}>click me to_Em </button> */}
     </div>
   );
 }

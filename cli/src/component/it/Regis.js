@@ -10,7 +10,7 @@ function Regis()
     const[position,setposition]=useState("");
     const[user,setuser]=useState([]);
     const regis=()=>{
-        Axios.post('http://localhost:3001/employeedetail',{
+        Axios.post('http://localhost:3001/add',{
         username:username,
         password:password,
         position:position
@@ -47,7 +47,7 @@ function Regis()
       <Row >
       <Col span={24} align={"middle"}><h2>Register</h2></Col>
      </Row>
-     <input type="text" id="bz"></input>
+     {/* <input type="text" id="bz"></input> */}
       <Form.Item
         label="Username"  
         name="username"
